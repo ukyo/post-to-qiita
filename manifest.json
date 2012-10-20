@@ -1,0 +1,24 @@
+{
+  "name": "Post to Qiita",
+  "description": "Post to Qiita",
+  "manifest_version": 2,
+  "version": "0.1",
+  
+  "intents": {
+    "http://webintents.org/save": [{
+      "title": "Post to Qiita",
+      "type": ["text/*"],
+      "href": "main.html",
+      "disposition": "inline"
+    }]
+  },
+  "sandbox": {
+    "pages": ["sandboxed.html"]
+  },
+  "permissions": ["https://qiita.com/api/v1/*", "tabs"],
+  "icons": {
+    "16": "img/16.png",
+    "48": "img/48.png",
+    "128": "img/128.png"
+  }
+}

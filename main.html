@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Post to Qiita</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <div id="finish" class="disabled">
+            <button id="qiita" class="btn btn-success">Show</button>
+            <button id="close" class="btn btn-danger">Close</button>
+        </div>
+        <div id="error" class="disabled"></div>
+        <div id="cover" class="disabled"><img src="img/ajax-loader.gif"></div>
+        <form class="form-inline disabled">
+            <input id="url_name" type="text" placeholder="Username" class="input-small">
+            <input id="password" type="password" placeholder="Password" class="input-small">
+            <button id="auth" class="btn">Auth</button>
+        </form>
+        <iframe src="sandboxed.html" class="disabled"></iframe>
+    </body>
+</html>

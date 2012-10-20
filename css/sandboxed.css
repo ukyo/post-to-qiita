@@ -1,0 +1,12 @@
+body {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 10px;
+    overflow-x: none;
+}
+
+#share {
+    text-align: center;
+    padding-top: 20px;
+}

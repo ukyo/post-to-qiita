@@ -1,0 +1,44 @@
+<!doctype html>
+<html ng-app>
+    <head>
+        <title>Post to Qiita</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/sandboxed.css">
+        <script src="js/angular.min.js"></script>
+        <script src="js/sandboxed.js"></script>
+    </head>
+    <body ng-controller="Ctrl">
+        <form name="form">
+            <label for="title">Title</label>
+            <input name="title" type="text" id="title" placeholder="Title" ng-model="title" required>
+            <label>Tags</label>
+            <ul class="unstyled">
+                <li ng-repeat="tag in tags">
+                    <input name="tagName" type="text" class="input-medium" placeholder="Name (required)" ng-model="tag.name" required>
+                    <input name="tagVersions" type="text" class="input-medium" placeholder="Version (optional)" ng-model="tag.versions" ng-list>
+                    <a href="#"><i class="icon-remove" ng-click="removeTag(tag)"></i></a>
+                </li>
+            </ul>
+            <button class="btn" ng-click="addTag()"><i class="icon-tag"></i> More</button>
+
+
+            <div>
+                <label class="checkbox inline">
+                    <input type="checkbox" ng-model="private" id="private"> private
+                </label>
+
+                <label class="checkbox inline">
+                    <input type="checkbox" ng-model="gist" id="gist"> gist
+                </label>
+
+                <label class="checkbox inline">
+                    <input type="checkbox" ng-model="tweet" id="tweet"> tweet
+                </label>
+            </div>
+
+            <div id="share">
+                <button class="btn-primary btn-large btn" ng-click="share()"><i class="icon-share icon-white"></i> Share</button>
+            </div>
+        </form>
+    </body>
+</html>
